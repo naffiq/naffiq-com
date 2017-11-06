@@ -1,9 +1,9 @@
 # naffiq.com repository
 
-Tools used for project:
+Tools used in project:
 
 - React
-- next.js for SSR
+- next.js
 - Apollo
 - Express
 - TypeScript
