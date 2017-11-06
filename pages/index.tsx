@@ -7,7 +7,7 @@ import Page from '../layouts/index';
 import PostsList from '../components/posts/PostsList';
 
 export default withData((props) =>
-    <Page title='главная'>
+    <Page title='главная' activeLink='home'>
         <div className="row">
             <div className="col-md-4">
                 <h1 className="page--title">Посты</h1>

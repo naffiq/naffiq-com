@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Link from 'next/link';
 
-export default ({}) => {
+export default ({activeLink}) => {
     return (
         <header className="site-header row justify-content-between no-gutters">
             <span className="title">
@@ -11,21 +11,22 @@ export default ({}) => {
             <ul className="main-menu">
                 <li className="main-menu--link-item">
                     <Link href="/">
-                        <a className="main-menu--link">Посты</a>
+                        <a className={`main-menu--link${activeLink === 'home' ? ' active' : ''}`}>Посты</a>
                     </Link>
                 </li>
                 <li className="main-menu--link-item">
-                    <Link href="/">
-                        <a className="main-menu--link">Обо мне</a>
+                    <Link href="/about">
+                        <a className={`main-menu--link${activeLink === 'about' ? ' active' : ''}`}>Обо мне</a>
                     </Link>
                 </li>
                 <li className="main-menu--link-item">
                     <Link href="https://github.com/naffiq">
-                        <a className="main-menu--link">GitHub: naffiq</a>
+                        <a className={`main-menu--link`}>GitHub: naffiq</a>
                     </Link>
                 </li>
             </ul>
 
+            {/*language=CSS*/}
             <style jsx>{`
                 .site-header {
                     margin: 30px 0;

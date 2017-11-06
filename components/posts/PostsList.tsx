@@ -6,10 +6,12 @@ import PostsListItem from './PostsListItem';
 const POSTS_PER_PAGE = 10;
 
 function PostsList ({data: {loading, error, allPosts, _allPostsMeta}, loadMorePosts}) {
-    console.log(allPosts);
+    if (loading || typeof allPosts === 'undefined') {
+        return <span>Загружаю посты</span>
+    }
     return (
         <div>
-            {allPosts.map((post, key) => <PostsListItem key={key} post={post}/>)}
+            {allPosts.map((post, key) => <PostsListItem key={post.id} post={post}/>)}
             {allPosts.length === 0 && <span>Я ещё ничего не написал</span>}
         </div>
     )
@@ -22,6 +24,7 @@ const allPosts = gql`
             title
             slug
             text
+            description
             createdAt
             imageUrl
         }

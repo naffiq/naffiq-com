@@ -4,9 +4,13 @@
         "target": "es2015",
         "jsx": "react",
         "allowJs": true,
-        "typeRoots": [ "../node_modules/@types" ]
+        "typeRoots": [ 
+            "node_modules/@types",
+            "./typings"
+        ]
     },
     "exclude": [
-        "next.config.js"
-    ]    
+        "next.config.js",
+        "server.js"
+    ]
 }

@@ -3,7 +3,7 @@ import * as React from 'react';
 import Page from '../layouts/index';
 
 export default () => 
-    <Page title='Some post'>
+    <Page title='Some post' activeLink='home'>
         <div className="row">
             <div className="col-md-3">
 
