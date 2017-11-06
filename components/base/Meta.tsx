@@ -13,6 +13,7 @@ export default ({title}: PropTypes) =>
 
             <link href="https://fonts.googleapis.com/css?family=PT+Mono&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet"/>
             <link href="https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans+Caption:400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet"/>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"/>
         </Head>
         <style jsx global>{`
             html, body {
@@ -23,9 +24,16 @@ export default ({title}: PropTypes) =>
             h1, h2, h3, h4, h5, h6 {
                 font-family: 'PT Mono', monospace;                
             }
+            h1 {
+                font-weight: bold;
+            }
 
             * {
                 font-family: 'PT Sans Caption', sans-serif;                
+            }
+
+            .page--title {
+                font-size: 48px;
             }
         `}</style>
     </div>

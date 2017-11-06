@@ -2,13 +2,18 @@ import * as React from 'react';
 import Link from 'next/link';
 
 import Page from '../layouts/index';
+import PostsList from '../components/posts/PostsList';
 
 export default () =>
     <Page title='главная'>
-        <h1>Посты</h1>
+        <div className="row">
+            <div className="col-md-4">
+                <h1 className="page--title">Посты</h1>
+            </div>
 
-        
-            <h2><Link prefetch href='/post'><a>Some post</a></Link></h2>
-        
-        <p>TypeScript magic!</p>
+            
+            <div className="col-md-8">
+                <PostsList/>
+            </div>
+        </div>
     </Page>
