@@ -3,4 +3,5 @@ build/
 .next/
 **/*.js
 !server.js
+!next.config.js
 .env
