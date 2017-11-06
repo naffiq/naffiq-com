@@ -1,7 +1,14 @@
 import * as React from 'react';
+import Link from 'next/link';
+
+import Page from '../layouts/index';
 
 export default () =>
-    <div>
-        <h1>Hello world!</h1>
+    <Page title='главная'>
+        <h1>Посты</h1>
+
+        
+            <h2><Link prefetch href='/post'><a>Some post</a></Link></h2>
+        
         <p>TypeScript magic!</p>
-    </div>
+    </Page>
