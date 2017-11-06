@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Link from 'next/link';
 
-export default ({}) => {
+export default ({post}) => {
 
     return (
         <article className="article-list--item">

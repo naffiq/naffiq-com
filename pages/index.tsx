@@ -1,10 +1,12 @@
 import * as React from 'react';
 import Link from 'next/link';
 
+import withData from '../lib/withData';
+
 import Page from '../layouts/index';
 import PostsList from '../components/posts/PostsList';
 
-export default () =>
+export default withData((props) =>
     <Page title='главная'>
         <div className="row">
             <div className="col-md-4">
@@ -17,3 +19,4 @@ export default () =>
             </div>
         </div>
     </Page>
+);
