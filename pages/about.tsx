@@ -7,7 +7,7 @@ import Page from '../layouts/index';
 import PostsList from '../components/posts/PostsList';
 
 export default withData((props) =>
-    <Page title='обо мне' activeLink='about'>
+    <Page title='обо мне' activeLink='about' imageUrl='https://source.unsplash.com/ICW6QYOcdlg/800x600' description='Разработчик, музыкант, прокрастинатор.'>
         <div className="row">
             <div className="col-md-4">
                 <h1 className="page--title">Обо мне</h1>

@@ -8,10 +8,8 @@ import Page from '../layouts/index';
 import PostView from '../components/posts/PostView';
 
 function Post ({post}) {
-    console.log('post', post);
-
     return (
-        <Page title='Some post' activeLink='home'>
+        <Page title={post.title} activeLink='home' description={post.description} imageUrl={post.imageUrl}>
             <PostView post={post}/>
         </Page>
     )

@@ -5,9 +5,9 @@ import Header from '../components/base/Header';
 
 
 
-export default ({title, activeLink, children}) => (
+export default ({title, activeLink, children, description, imageUrl}) => (
     <div className="container">
-        <Meta title={title}/>
+        <Meta title={title} description={description} imageUrl={imageUrl}/>
         <Header activeLink={activeLink}/>
         {children}
     </div>
