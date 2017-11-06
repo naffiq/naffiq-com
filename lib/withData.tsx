@@ -25,13 +25,14 @@ export default ComposedComponent => {
         static async getInitialProps (ctx) {
             let serverState = { apollo: { } };
 
+            const apollo = initApollo(null);
+            
             let composedInitialProps = {};
             if (ComposedComponent.getInitialProps) {
-                composedInitialProps = await ComposedComponent.getInitialProps(ctx);
+                composedInitialProps = await ComposedComponent.getInitialProps(ctx, apollo);
             }
 
             if (!process.browser) {
-                const apollo = initApollo(null);
 
                 const url = {query: ctx.query, pathname: ctx.pathname};
                 try {

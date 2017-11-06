@@ -7,7 +7,7 @@
   "author": "naffiq <naffiq@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "concurrently \"tsc --watch\" next",
+    "dev": "concurrently \"tsc --watch\" \"node server.js\"",
     "start": "tsc && next build && next start"
   },
   "dependencies": {
