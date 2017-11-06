@@ -6,9 +6,17 @@
   "repository": "https://github.com/naffiq/naffiq-com",
   "author": "naffiq <naffiq@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "concurrently \"tsc --watch\" next"
+  },
   "dependencies": {
     "next": "^4.1.4",
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.0.20",
+    "concurrently": "^3.5.0",
+    "typescript": "^2.6.1"
   }
 }
