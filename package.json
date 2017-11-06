@@ -1,0 +1,14 @@
+{
+  "name": "naffiq-com",
+  "version": "1.0.0",
+  "description": "My personal blog using next.js and react",
+  "main": "index.js",
+  "repository": "https://github.com/naffiq/naffiq-com",
+  "author": "naffiq <naffiq@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^4.1.4",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  }
+}
