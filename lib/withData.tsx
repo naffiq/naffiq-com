@@ -20,7 +20,7 @@ interface PropTypes {
 export default ComposedComponent => {
     return class WithData extends React.Component<PropTypes, any> {
         static displayName = `WithData(${getComponentDisplayName(ComposedComponent)})`;
-        apollo: object;
+        apollo: any;
         
         static async getInitialProps (ctx) {
             let serverState = { apollo: { } };

@@ -15,9 +15,6 @@ function create (initialState) {
         ssrMode: !process.browser,
         link: createHttpLink({
             uri: process.env.REACT_APP_GRAPHQL_URL,
-            opts: {
-                credentials: 'same-origin'
-            },
             fetch
         }),
         cache: new InMemoryCache().restore(initialState || {}),

@@ -8,16 +8,19 @@
   "license": "MIT",
   "scripts": {
     "dev": "concurrently \"tsc --watch\" \"node server.js\"",
-    "start": "tsc && next build && next start"
+    "start": "tsc && next build && \"node server.js\""
   },
   "dependencies": {
     "apollo-client": "^2.0.2",
     "apollo-client-preset": "^1.0.2",
+    "apollo-server-express": "^1.2.0",
+    "body-parser": "^1.18.2",
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
-    "graphql": "^0.11.7",
+    "graphql": "0.10.5",
     "graphql-anywhere": "^4.0.0",
     "graphql-tag": "^2.5.0",
+    "graphql-tools": "^2.7.2",
     "isomorphic-unfetch": "^2.0.0",
     "moment": "^2.19.1",
     "next": "^4.1.4",

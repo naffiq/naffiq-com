@@ -5,9 +5,12 @@
         "jsx": "react",
         "allowJs": true,
         "typeRoots": [ 
-            "node_modules/@types",
-            "./typings"
-        ]
+            "node_modules/@types"
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "*": ["typings/*"]
+        }
     },
     "exclude": [
         "next.config.js",

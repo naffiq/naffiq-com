@@ -5,7 +5,12 @@ import PostsListItem from './PostsListItem';
 
 const POSTS_PER_PAGE = 10;
 
-function PostsList ({data: {loading, error, allPosts, _allPostsMeta}, loadMorePosts}) {
+interface PropTypes {
+    data: any,
+    loadMorePosts: any
+};
+
+function PostsList ({data: {loading, error, allPosts, _allPostsMeta}, loadMorePosts}: PropTypes) {
     if (loading || typeof allPosts === 'undefined') {
         return <span>Загружаю посты</span>
     }
@@ -41,7 +46,7 @@ export default graphql(allPosts, {
             first: POSTS_PER_PAGE
         }
     },
-    props: ({data}) => ({
+    props: ({data}: any) => ({
         data,
         loadMorePosts: () => {
             return data.fetchMore({
