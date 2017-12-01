@@ -12,9 +12,10 @@ export default ({title, description, imageUrl}) =>
             <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"/>
 
             <meta name="description" content={description}/>
-            <meta name="og:description" content={description}/>
-            <meta name="og:title" content={`Галымжан Абдугалимов — ${title}`}/>
-            <meta name="og:image" content={imageUrl}/>
+            <meta property="og:description" content={description}/>
+            <meta property="og:title" content={title}/>
+            <meta property="og:site_name" content="Блог Галымжана Абдугалимова"/>
+            <meta property="og:image" content={imageUrl}/>
         </Head>
         <style jsx global>{`
             html, body {
