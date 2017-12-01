@@ -7,8 +7,8 @@
   "author": "naffiq <naffiq@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "concurrently \"tsc --watch\" \"node server.js\"",
-    "start": "tsc && next build && \"node server.js\""
+    "dev": "node server.js",
+    "start": "next build && \"node server.js\""
   },
   "dependencies": {
     "apollo-client": "^2.0.2",

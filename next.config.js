@@ -5,6 +5,6 @@ module.exports = {
     config.plugins.push(
       new webpack.EnvironmentPlugin(process.env)
     )
-    return config
+    return config;
   }
 }

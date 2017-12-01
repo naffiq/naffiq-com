@@ -1,13 +1,7 @@
 import * as React from 'react';
 import Head from 'next/head';
 
-interface PropTypes {
-    title: string,
-    description: string,
-    imageUrl: string
-};
-
-export default ({title, description, imageUrl}: PropTypes) =>
+export default ({title, description, imageUrl}) =>
     <div>
         <Head>
             <title>Галымжан Абдугалимов — {title}</title>

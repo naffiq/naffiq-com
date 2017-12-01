@@ -7,18 +7,8 @@ import withData from '../lib/withData'
 import Page from '../layouts/index';
 import PostView from '../components/posts/PostView';
 
-interface PropTypes {
-    post: {
-        id: number,
-        title: string,
-        text: string,
-        imageUrl: string,
-        description: string,
-        createdAt: string
-    }
-};
 
-class Post extends React.Component<PropTypes, any> {
+class Post extends React.Component {
     async getInitialProps(context, apolloClient) {
         const {data} = await apolloClient.query({
             query: gql`
