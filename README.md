@@ -1,4 +1,4 @@
-# naffiq.com repository
+# naffiq.com [![Build Status](https://travis-ci.org/naffiq/naffiq-com.svg?branch=master)](https://travis-ci.org/naffiq/naffiq-com)
 
 Tools used in project:
 

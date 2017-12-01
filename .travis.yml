@@ -4,6 +4,9 @@ language: javascript
 
 services:
   - docker
+
+before_intall:
+  - echo "REACT_APP_GRAPHQL_URL = $REACT_APP_GRAPHQL_URL\nREACT_APP_FILE_UPLOAD_URL = $REACT_APP_FILE_UPLOAD_URL" > .env
   
 script:
   - docker build -t naffiq/naffiq-com .
