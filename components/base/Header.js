@@ -21,7 +21,7 @@ export default ({activeLink}) => {
                 </li>
                 <li className="main-menu--link-item">
                     <Link href="https://github.com/naffiq">
-                        <a className={`main-menu--link`}>GitHub: naffiq</a>
+                        <a className={`main-menu--link`} target='_blank'>GitHub: naffiq</a>
                     </Link>
                 </li>
             </ul>
