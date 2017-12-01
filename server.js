@@ -17,9 +17,8 @@ app.prepare()
     server.get('/post/:slug', (req, res) => {
         const actualPage = '/post';
         const queryParams = {slug: req.params.slug};
-        console.log('queryParams', queryParams);
         app.render(req, res, actualPage, queryParams);
-    })
+    });
 
     server.get('*', (req, res) => {
         return handle(req, res);
@@ -28,7 +27,7 @@ app.prepare()
     server.listen(PORT, (err) => {
         if (err) throw err;
         console.log(`> Ready on http://localhost:${PORT}`);
-    })
+    });
 })
 .catch((ex) => {
     console.error(ex.stack);

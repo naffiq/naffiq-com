@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { withApollo, compose } from 'react-apollo'
 import gql from 'graphql-tag'
 
@@ -8,8 +8,8 @@ import Page from '../layouts/index';
 import PostView from '../components/posts/PostView';
 
 
-class Post extends React.Component {
-    async getInitialProps(context, apolloClient) {
+class Post extends Component {
+    static async getInitialProps(context, apolloClient) {
         const {data} = await apolloClient.query({
             query: gql`
             query getPost($slug: String!) {
@@ -26,7 +26,7 @@ class Post extends React.Component {
             variables: {
                 slug: context.query.slug
             }
-        })
+        });
         
         return {post: data.Post};
     };
