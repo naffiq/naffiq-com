@@ -15,6 +15,7 @@ class Post extends Component {
             query getPost($slug: String!) {
                 Post(slug: $slug) {
                   id
+                  slug
                   title
                   text
                   imageUrl

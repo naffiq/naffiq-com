@@ -48,22 +48,6 @@ console.log('ok, logout');
                                 <a onClick={this.logout}>Выйти</a>
                             </li>
                         </ul>
-                        <style jsx>{`
-                            .side-menu {
-                                list-style: none;
-                                padding-left: 0;
-                            }
-                            .side-menu li {
-                                margin: 10px 0;
-                            }
-                            .side-menu li a {
-                                color: #000;
-                            }
-                            .side-menu li a:hover {
-                                text-decoration: underline;
-                                cursor: pointer;
-                            }
-                        `}</style>
                     </div>
                 )
             }

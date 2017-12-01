@@ -19,6 +19,12 @@ app.prepare()
         const queryParams = {slug: req.params.slug};
         app.render(req, res, actualPage, queryParams);
     });
+    
+    server.get('/post-update/:slug', (req, res) => {
+        const actualPage = '/post-update';
+        const queryParams = {slug: req.params.slug};
+        app.render(req, res, actualPage, queryParams);
+    });
 
     server.get('*', (req, res) => {
         return handle(req, res);
