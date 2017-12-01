@@ -13,7 +13,7 @@ const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
 app.prepare()
 .then(() => {
     const server = express();
-
+    
     server.get('/post/:slug', (req, res) => {
         const actualPage = '/post';
         const queryParams = {slug: req.params.slug};

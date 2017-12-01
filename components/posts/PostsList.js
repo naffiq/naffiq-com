@@ -41,7 +41,7 @@ export default graphql(allPosts, {
             first: POSTS_PER_PAGE
         }
     },
-    props: ({data}: any) => ({
+    props: ({data}) => ({
         data,
         loadMorePosts: () => {
             return data.fetchMore({
