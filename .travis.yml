@@ -1,0 +1,9 @@
+sudo: required
+
+language: javascript
+
+services:
+  - docker
+  
+script:
+  - docker build -t naffiq/naffiq-com .
