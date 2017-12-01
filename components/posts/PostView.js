@@ -10,14 +10,11 @@ import redirect from '../../lib/redirect';
 
 moment.locale('ru-RU')
 
-const PostView = ({post, deletePost}) => {
+const PostView = ({post, isAuthorized, deletePost}) => {
     const updateLink = {pathname: '/post-update', query: {slug: post.slug}};
-
-    return (
-        <div className="row">
-            <div className="col-md-3 text-right">
-                <span>{moment(post.createdAt).format('MMMM d')}</span>
-
+    const _renderSideMenu = () => {
+        if (isAuthorized) {
+            return (
                 <ul className="side-menu">
                     <li>
                         <Link prefetch href={updateLink} as={`/post-update/${post.slug}`}>
@@ -28,6 +25,18 @@ const PostView = ({post, deletePost}) => {
                         <a onClick={(event) => deletePost(event, post.id)}>Удалить пост</a>
                     </li>
                 </ul>
+            );
+        }
+
+        return <div/>;
+    }
+
+    return (
+        <div className="row">
+            <div className="col-md-3 text-right">
+                <span>{moment(post.createdAt).format('MMMM d')}</span>
+
+                {_renderSideMenu()}
             </div>
             <div className="col-md-9">
                 <h1 className="post--title">{post.title}</h1>
