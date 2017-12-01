@@ -6,7 +6,6 @@ Tools used in project:
 - next.js
 - Apollo
 - Express
-- TypeScript
 
 ## Installation
 
