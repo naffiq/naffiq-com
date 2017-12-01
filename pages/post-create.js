@@ -6,6 +6,7 @@ import checkUserSession from '../lib/checkUserSession';
 import redirect from '../lib/redirect';
 import withData from '../lib/withData';
 import Page from '../layouts';
+import ImageUploadInput from '../components/posts/forms/ImageUploadInput';
 
 class PostCreate extends Component {
     static async getInitialProps(context, apolloClient) {
@@ -43,6 +44,7 @@ class PostCreate extends Component {
                                 <label htmlFor="imageUrl">URL Изображения</label>
                                 <input type="text" name="imageUrl"/>
                             </div>
+                            <ImageUploadInput />
                             <div className="form-group">
                                 <label htmlFor="text">Текст</label>
                                 <textarea name="text" rows="6"></textarea>                            
