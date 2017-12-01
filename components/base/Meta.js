@@ -9,6 +9,7 @@ export default ({title, description, imageUrl}) =>
 
             <link href="//fonts.googleapis.com/css?family=PT+Mono&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet"/>
             <link href="//fonts.googleapis.com/css?family=PT+Mono|PT+Sans+Caption:400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet"/>
+            <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet"/>
             <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"/>
 
             <meta name="description" content={description}/>
@@ -35,6 +36,13 @@ export default ({title, description, imageUrl}) =>
 
             .page--title {
                 font-size: 48px;
+            }
+            
+            pre {
+                background-color: #eee;
+                padding: 15px;
+                border-radius: 3px;
+                border: 1px solid #DDD;
             }
         `}</style>
     </div>

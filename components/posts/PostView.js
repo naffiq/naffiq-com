@@ -1,5 +1,7 @@
 import React from 'react';
 import moment from 'moment';
+import Markdown from 'react-remarkable';
+import hljs from 'highlight.js';
 
 moment.locale('ru-RU')
 
@@ -14,7 +16,24 @@ export default ({post}) => (
         <img className="post--cover" src={post.imageUrl} alt=""/>
 
         <div className="post--text">
-            <p dangerouslySetInnerHTML={{__html: post.text}} />
+            <Markdown 
+                source={post.text} 
+                options={{
+                    highlight: (str, lang) => {
+                        if (lang && hljs.getLanguage(lang)) {
+                            try {
+                                return hljs.highlight(lang, str).value;
+                            } catch (err) {}
+                        }
+
+                        try {
+                            return hljs.highlightAuto(str).value;
+                        } catch (err) {}
+
+                        return '';
+                    }
+                }}
+            />
         </div>
     </div>
 
