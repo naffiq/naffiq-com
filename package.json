@@ -8,7 +8,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "node server.js",
-    "start": "next build && \"node server.js\""
+    "build": "next build",
+    "start": "node server.js"
   },
   "dependencies": {
     "apollo-client": "^2.0.2",
