@@ -1,0 +1,16 @@
+sudo: required
+
+language: javascript
+
+services:
+  - docker
+
+script:
+  # - echo "REACT_APP_GRAPHQL_URL = $REACT_APP_GRAPHQL_URL\nREACT_APP_FILE_UPLOAD_URL = $REACT_APP_FILE_UPLOAD_URL" > .env
+  - docker build -t naffiq/naffiq-com .
+
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
+    docker push naffiq/naffiq-com;
+    fi

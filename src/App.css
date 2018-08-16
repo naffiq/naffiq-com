@@ -1,0 +1,24 @@
+html,
+body,
+#root,
+#app-layout {
+  height: 100%;
+}
+* {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+a {
+  color: #fc4275;
+  text-decoration: none;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.container.narrow {
+  width: 800px;
+}
