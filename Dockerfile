@@ -1,5 +1,5 @@
 # Stage 1 — build cra static files
-FROM node:8.11 as build-deps
+FROM node:8 as build-deps
 WORKDIR /usr/src/app
 COPY package.json yarn.lock ./
 RUN yarn
