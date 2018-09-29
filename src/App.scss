@@ -17,8 +17,12 @@ a {
 .container {
   width: 1200px;
   margin: 0 auto;
+
+  *.narrow {
+    width: 800px;
+  }
 }
 
-.container.narrow {
-  width: 800px;
+.text-strikethrough {
+  text-decoration: line-through;
 }

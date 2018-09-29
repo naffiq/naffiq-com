@@ -1,10 +1,14 @@
-import React from "react";
+import * as React from "react";
 import { Link } from "react-router-dom";
 
 import projects from "./projects";
 import "./index.css";
 
-export default class Home extends React.Component {
+interface Props {
+  match: any;
+}
+
+export default class Home extends React.Component<Props> {
   state = {
     project: null,
     nextSlug: null,
