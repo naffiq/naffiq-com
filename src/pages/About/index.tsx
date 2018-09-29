@@ -10,7 +10,11 @@ export default () => (
     <p>
       Despite having rich backend development experience, I recently switched to
       React/React Native development. I use TypeScript for commercial
-      development, but use plain ES6 for personal projects.
+      development,{" "}
+      <span className="text-strikethrough">
+        but use plain ES6 for personal projects
+      </span>
+      and now I use typescript for personal projects as well. Well, it rules.
     </p>
     <p>
       In order to keep everything in JS, I started developing backend for my

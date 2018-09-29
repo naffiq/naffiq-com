@@ -1,6 +1,6 @@
 import * as React from "react";
 import { BrowserRouter, Switch } from "react-router-dom";
-import "./App.css";
+import "./App.scss";
 
 import AppRoute from "./components/AppRoute";
 import Home from "./pages/Home";
