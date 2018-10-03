@@ -53,7 +53,14 @@ module.exports = {
         use: [
           devMode ? "style-loader" : MiniCssExtractPlugin.loader,
           "css-loader",
-          "sass-loader"
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true,
+              data: '@import "mixins";',
+              includePaths: [path.resolve(__dirname, "./src/styles")]
+            }
+          }
         ]
       },
       {
@@ -84,7 +91,9 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       filename: path.resolve(__dirname, "public/index.html"),
-      template: path.resolve(__dirname, "templates/index.ejs")
+      template: path.resolve(__dirname, "templates/index.ejs"),
+      inject: true,
+      includeAnalytics: process.env.NODE_ENV
     })
   ],
 
