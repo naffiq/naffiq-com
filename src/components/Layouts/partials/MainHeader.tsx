@@ -2,7 +2,7 @@ import * as React from "react";
 import { Link, withRouter } from "react-router-dom";
 
 const avatarSrc = require("./assets/avatar.png");
-import "./MainHeader.css";
+import "./MainHeader.scss";
 
 const MainHeader = ({ location: { pathname } }) => {
   return (

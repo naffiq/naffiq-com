@@ -2,7 +2,7 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 
 import projects from "./projects";
-import "./index.css";
+import "./index.scss";
 
 interface Props {
   match: any;

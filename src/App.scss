@@ -15,11 +15,24 @@ a {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
+
+  @include desktop {
+    width: 1200px;
+  }
   margin: 0 auto;
 
-  *.narrow {
-    width: 800px;
+  &.narrow {
+    width: 100%;
+
+    @include desktop {
+      width: 800px;
+    }
+  }
+  .content {
+    padding: 0 32px;
+    display: block;
+    width: calc(100% - 64px);
   }
 }
 

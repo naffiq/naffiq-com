@@ -1,11 +1,26 @@
 import * as React from "react";
+import { Query } from "react-apollo";
+import { FETCH_BLOG_BY_SLUG } from "./graphql";
 
-export default () => (
+export default ({ match }) => (
   <div className="container narrow">
-    <h1>🏗 In development</h1>
-    <p>
-      Tbh, I don't even know if I need this part of the website, but we'll
-      see...
-    </p>
+    <Query
+      query={FETCH_BLOG_BY_SLUG}
+      variables={{
+        slug: match.params.slug
+      }}
+    >
+      {({ data, loading }) => {
+        if (loading) {
+          return "Loading";
+        }
+        return (
+          <>
+            <h1>{data.post.title}</h1>
+            {data.post.body}
+          </>
+        );
+      }}
+    </Query>
   </div>
 );

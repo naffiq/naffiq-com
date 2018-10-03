@@ -1,0 +1,9 @@
+@import "mixins";
+
+.blog-post {
+  padding: 0 32px;
+
+  @include desktop {
+    padding: 0;
+  }
+}
