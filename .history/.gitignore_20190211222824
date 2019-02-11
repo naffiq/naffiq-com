@@ -10,7 +10,8 @@
 /coverage
 
 # production
-public/
+/public/build
+/public/index.html
 
 # misc
 .DS_Store

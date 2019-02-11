@@ -1,7 +1,7 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
-# gatsby cache
-.cache/
+# webpack cache
+.awcache
 
 # dependencies
 /node_modules
@@ -10,7 +10,8 @@
 /coverage
 
 # production
-public/
+/public/build
+/public/index.html
 
 # misc
 .DS_Store
