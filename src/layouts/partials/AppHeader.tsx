@@ -3,11 +3,9 @@ import {
   HeaderWrapper,
   HeaderContainer,
   AvatarLink,
-  AvatarImg,
-  HeaderMenu,
-  HeaderMenuItem,
-  HeaderMenuLink
+  AvatarImg
 } from "./HeaderComponents";
+import MainMenu from "./MainMenu";
 
 const avatarSrc = require("./assets/avatar.png");
 
@@ -25,41 +23,7 @@ const AppHeader = () => {
           @naffiq
         </AvatarLink>
 
-        <HeaderMenu>
-          <HeaderMenuItem>
-            <HeaderMenuLink
-              to="/"
-              activeStyle={{
-                fontWeight: 700
-              }}
-            >
-              Home
-            </HeaderMenuLink>
-          </HeaderMenuItem>
-          <HeaderMenuItem>
-            <HeaderMenuLink
-              to="/about"
-              activeStyle={{
-                fontWeight: 700
-              }}
-            >
-              About
-            </HeaderMenuLink>
-          </HeaderMenuItem>
-          <HeaderMenuItem>
-            <HeaderMenuLink
-              to="/blog"
-              activeStyle={{
-                fontWeight: 700
-              }}
-            >
-              Blog
-            </HeaderMenuLink>
-          </HeaderMenuItem>
-          {/* <HeaderMenuItem>
-            <HeaderMenuLink to="/projects">Projects</HeaderMenuLink>
-          </HeaderMenuItem> */}
-        </HeaderMenu>
+        <MainMenu />
       </HeaderContainer>
     </HeaderWrapper>
   );

@@ -6,8 +6,12 @@ export const HeaderWrapper = styled.header`
   height: 100px;
   display: flex;
   align-items: center;
-  padding: 0 32px;
+  padding: 0 16px;
   background-color: #ffffff;
+
+  @media (min-width: 767px) {
+    padding: 0 32px;
+  }
 `;
 
 export const HeaderContainer = styled(Container)`
@@ -23,8 +27,12 @@ export const AvatarLink = styled(Link)`
   display: flex;
   align-items: center;
   color: #fc4275;
-  margin-right: 100px;
   font-weight: 700;
+  margin-right: 40px;
+
+  @media (min-width: 767px) {
+    margin-right: 100px;
+  }
 `;
 
 export const AvatarImg = styled.img`
@@ -32,9 +40,19 @@ export const AvatarImg = styled.img`
 `;
 
 export const HeaderMenu = styled.ul`
-  display: flex;
   list-style: none;
   padding-left: 0;
+  display: none;
+  flex-direction: column;
+
+  &.active {
+    display: flex;
+  }
+
+  @media (min-width: 767px) {
+    display: flex;
+    flex-direction: row;
+  }
 `;
 
 export const HeaderMenuItem = styled.li`
