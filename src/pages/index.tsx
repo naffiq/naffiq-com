@@ -1,8 +1,6 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import DefaultLayout from "../layouts";
-import Link from "../components/Link";
-import styled from "styled-components";
 import DemoSlider from "../components/DemoSlider";
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
