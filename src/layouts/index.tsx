@@ -1,70 +1,48 @@
-import * as React from 'react'
-import Link from 'gatsby-link'
-import Helmet from 'react-helmet'
+import * as React from "react";
+import Helmet from "react-helmet";
 
-import './index.css'
+import AppHeader from "./partials/AppHeader";
+import styled from "styled-components";
 
-const Header = () => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          Gatsby
-        </Link>
-      </h1>
-    </div>
-  </div>
-)
-
+import "./index.css";
 interface DefaultLayoutProps extends React.HTMLProps<HTMLDivElement> {
-  location: {
-    pathname: string
-  }
-  children: any
+  children: any;
 }
 
-class DefaultLayout extends React.PureComponent<DefaultLayoutProps, void> {
-  public render() {
-    return (
-      <div>
-        <Helmet
-          title="Gatsby Default Starter"
-          meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
-          ]}
+const AppLayout = styled.div`
+  height: 100%;
+
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+`;
+
+const DefaultLayout = ({ children }: DefaultLayoutProps) => {
+  return (
+    <AppLayout>
+      <Helmet
+        title="Galymzhan Abdugalimov — Personal website"
+        meta={[
+          {
+            name: "description",
+            content:
+              "Hi! My name is Galymzhan, I'm software developer from Kazakhstan, living in Haarlem, Netherlands."
+          },
+          {
+            name: "keywords",
+            content:
+              "software developer, full-stack, frontend, backend, javascript, typescript, react, nodejs"
+          }
+        ]}
+      >
+        <link
+          href="https://fonts.googleapis.com/css?family=Open+Sans"
+          rel="stylesheet"
         />
-        <Header />
-        <div
-          style={{
-            margin: '0 auto',
-            maxWidth: 960,
-            padding: '0px 1.0875rem 1.45rem',
-            paddingTop: 0,
-          }}
-        >
-          {this.props.children()}
-        </div>
-      </div>
-    )
-  }
-}
+      </Helmet>
+      <AppHeader />
+      {children}
+    </AppLayout>
+  );
+};
 
-export default DefaultLayout
+export default DefaultLayout;

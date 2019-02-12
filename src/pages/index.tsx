@@ -1,5 +1,9 @@
-import * as React from 'react'
-import Link from 'gatsby-link'
+import * as React from "react";
+import { graphql } from "gatsby";
+import DefaultLayout from "../layouts";
+import Link from "../components/Link";
+import styled from "styled-components";
+import DemoSlider from "../components/DemoSlider";
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -7,28 +11,22 @@ interface IndexPageProps {
   data: {
     site: {
       siteMetadata: {
-        title: string
-      }
-    }
-  }
+        title: string;
+      };
+    };
+  };
 }
 
 export default class extends React.Component<IndexPageProps, {}> {
   constructor(props: IndexPageProps, context: any) {
-    super(props, context)
+    super(props, context);
   }
   public render() {
     return (
-      <div>
-        <h1>Hi people</h1>
-        <p>
-          Welcome to your new{' '}
-          <strong>{this.props.data.site.siteMetadata.title}</strong> site.
-        </p>
-        <p>Now go build something great.</p>
-        <Link to="/page-2/">Go to page 2</Link>
-      </div>
-    )
+      <DefaultLayout>
+        <DemoSlider />
+      </DefaultLayout>
+    );
   }
 }
 
@@ -40,4 +38,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
