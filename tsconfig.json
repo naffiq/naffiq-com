@@ -1,22 +1,14 @@
 {
-  "compilerOptions": {
-    "experimentalDecorators": true,
-    "module": "commonjs",
-    "target": "es5",
-    "allowSyntheticDefaultImports": true,
-    "preserveConstEnums": true,
-    "allowJs": false,
-    "noImplicitReturns": true,
-    "noUnusedParameters": true,
-    "noUnusedLocals": true,
-    "jsx": "react",
-    "outDir": "./dist/",
-    "sourceMap": true,
-    "noImplicitAny": false,
-    "typeRoots": ["node_modules/@types"],
-    "lib": ["es6", "dom", "esnext.asynciterable", "es2017.object"]
-  },
-  "types": ["react", "react-dom"],
-  "exclude": ["node_modules"],
-  "compileOnSave": false
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "module": "commonjs",
+        "target": "esnext",
+        "jsx": "react",
+        "lib": ["dom", "es2015", "es2017"]
+    },
+    "include": [
+        "./src/**/*"
+    ]
 }

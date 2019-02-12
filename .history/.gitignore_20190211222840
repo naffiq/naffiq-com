@@ -2,7 +2,6 @@
 
 # gatsby cache
 .cache/
-.history/
 
 # dependencies
 /node_modules
@@ -11,7 +10,7 @@
 /coverage
 
 # production
-public/*
+public/
 
 # misc
 .DS_Store
