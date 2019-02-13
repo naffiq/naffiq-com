@@ -4,8 +4,12 @@ import Container from "../Container";
 
 export const DemoIFrame = styled.iframe`
   width: 100%;
-  height: calc(100% - 180px);
+  height: calc(100% - 200px);
   border: none;
+
+  @media (min-width: 1024px) {
+    height: calc(100% - 180px);
+  }
 `;
 
 export const DemoLink = styled.a``;
@@ -15,21 +19,29 @@ export const DemoFooterContainer = styled(Container)`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+
+  flex-direction: column-reverse;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 `;
 
 export const SliderControls = styled.div`
   display: flex;
-  flex-direction: column;
-  width: 150px;
-  @media (min-width: 1024px) {
-    flex-direction: row;
+  justify-content: space-around;
+  padding: 16px 0;
+  width: 100%;
+  flex-direction: row;
+
+  @media (min-width: 768px) {
     width: auto;
   }
 `;
 
 export const SliderLink = styled.a<{ disabled?: boolean }>`
   line-height: 40px;
-  font-size: 14px;
+  font-size: 16px;
   cursor: ${props => (props.disabled ? "default" : "pointer")};
   color: ${props => (props.disabled ? "#e1e1e1" : "#fc4275")};
 
@@ -40,7 +52,12 @@ export const SliderLink = styled.a<{ disabled?: boolean }>`
     text-align: right;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) and (max-width: 1199px) {
+    line-height: 80px;
+    font-size: 24px;
+  }
+
+  @media (min-width: 1200px) {
     line-height: 180px;
     font-size: 24px;
 

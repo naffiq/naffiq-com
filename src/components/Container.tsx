@@ -4,7 +4,7 @@ export const Container = styled.div<{ narrow?: boolean }>`
   width: 100%;
   margin: 0 auto;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1280px) {
     width: ${props => (props.narrow ? "800px" : "1200px")};
   }
 `;
