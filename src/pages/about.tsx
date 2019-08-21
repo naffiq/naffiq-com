@@ -11,7 +11,7 @@ const AboutPage = () => (
         <h1>Hello!</h1>
         <Paragraph>
           My name is Galymzhan Abdugalimov and I'm software developer, living
-          and working in Haarlem, Netherlands.
+          and working in Almaty, Kazakhstan.
         </Paragraph>
         <Paragraph>
           Despite having rich backend development experience, I recently

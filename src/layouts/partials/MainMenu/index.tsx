@@ -54,6 +54,7 @@ const MainMenu = () => {
               activeStyle={{
                 fontWeight: 700
               }}
+              partiallyActive
             >
               Blog
             </HeaderMenuLink>
