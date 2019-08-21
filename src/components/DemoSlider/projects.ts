@@ -28,7 +28,7 @@ export default [
     slug: "tic-tac-toe",
     description:
       "Small React app used to polish Jest. (Uses heroku, might take a while to load)",
-    iframeUrl: "http://naffiq-tic-tac-toe.herokuapp.com",
+    iframeUrl: "https://naffiq.github.io/tic-tac-toe/",
     links: [
       {
         label: "Source code",
