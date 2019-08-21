@@ -6,8 +6,7 @@ import Container, { ContainerContent } from "../components/Container";
 import DefaultLayout from "../layouts";
 import { Heading1 } from "../components/Typography";
 
-export default function BlogPostTemplate({data, ...rest}: any) {
-  console.log(data, rest);
+export default function BlogPostTemplate({data}: any) {
   const { markdownRemark: post } = data;
   return (
     <DefaultLayout>

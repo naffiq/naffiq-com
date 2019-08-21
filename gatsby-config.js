@@ -1,4 +1,3 @@
-console.log(`${__dirname}/src/markdown-pages`);
 module.exports = {
   siteMetadata: {
     title: `Galymzhan Abdugalimov — Personal website`

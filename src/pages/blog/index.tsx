@@ -9,7 +9,6 @@ import BlogListItem from "../../components/Blog/BlogListItem";
 
 const BlogPage = ({data}: any) => {
   const { edges: posts  } = data.allMarkdownRemark;
-  console.log(posts);
   return (
     <DefaultLayout>
       <Container narrow>
