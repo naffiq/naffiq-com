@@ -1,5 +1,17 @@
 export default [
   {
+    title: "Eblett",
+    slug: "eblett",
+    description: "Molly @ Haarlem, 2018",
+    iframeUrl: "https://naffiq.github.io/eblett/",
+    links: [
+      {
+        label: "Source code",
+        url: "https://github.com/naffiq/eblett"
+      }
+    ]
+  },
+  {
     title: "Motherland",
     slug: "3d-globe",
     description: "First three.js experiment",
