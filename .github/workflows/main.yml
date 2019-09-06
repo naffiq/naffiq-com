@@ -12,5 +12,7 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         version: v10.*
+    - name: Install node dependencies
+      run: npm i
     - name: Build gatsby
       run: npm run build
