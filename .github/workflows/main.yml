@@ -16,3 +16,11 @@ jobs:
       run: npm i
     - name: Build gatsby
       run: npm run build
+    - name: Deploy
+      if: success()
+      uses: crazy-max/ghaction-github-pages@master
+      with:
+        target_branch: gh-pages
+        build_dir: public
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
