@@ -25,7 +25,7 @@ const DefaultLayout = ({ children }: DefaultLayoutProps) => {
           {
             name: "description",
             content:
-              "Hi! My name is Galymzhan, I'm software developer from Kazakhstan, living in Haarlem, Netherlands."
+              "Hi! My name is Galymzhan, I'm software developer from Kazakhstan, living in Almaty, Kazakhstan."
           },
           {
             name: "keywords",
