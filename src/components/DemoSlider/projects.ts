@@ -1,5 +1,16 @@
 export default [
   {
+    title: "little-synth",
+    slug: "little-synth",
+    description: "Tone.js synth experiment",
+    links: [
+      {
+        label: "Source code",
+        url: "https://github.com/naffiq/little-synth"
+      }
+    ]
+  },
+  {
     title: "Eblett",
     slug: "eblett",
     description: "Molly @ Haarlem, 2018",
