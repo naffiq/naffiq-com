@@ -3,6 +3,7 @@ export default [
     title: "little-synth",
     slug: "little-synth",
     description: "Tone.js synth experiment",
+    iframeUrl: "https://naffiq.github.io/little-synth/",
     links: [
       {
         label: "Source code",
