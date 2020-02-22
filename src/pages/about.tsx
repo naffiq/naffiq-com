@@ -3,6 +3,7 @@ import * as React from "react";
 import Container, { ContainerContent } from "../components/Container";
 import DefaultLayout from "../layouts";
 import { LineThrough, Paragraph } from "../components/Typography";
+import Link, { A } from "../components/Link";
 
 const AboutPage = () => (
   <DefaultLayout>
@@ -10,23 +11,26 @@ const AboutPage = () => (
       <ContainerContent>
         <h1>Hello!</h1>
         <Paragraph>
-          My name is Galymzhan Abdugalimov and I'm software developer, living
-          and working in Almaty, Kazakhstan.
+          My name is Galymzhan Abdugalimov and I manage IT projects @{" "}
+          <A href="https://petrel.ai" target="_blank">
+            petrel.ai
+          </A>{" "}
+          where we make web services and portals for industrial and financial
+          companies.
         </Paragraph>
         <Paragraph>
-          Despite having rich backend development experience, I recently
-          switched to React/React Native development. I use TypeScript for
-          commercial development,{" "}
-          <LineThrough>but use plain ES6 for personal projects</LineThrough> and
-          now I use typescript for personal projects as well. Well, it rules 🤘
+          I used to write code before I realised that I prefer working with
+          people rather than machines. But old habbits never go so I create pet
+          projects from time to time and <Link to="/">put it here</Link>, on my
+          website.
         </Paragraph>
         <Paragraph>
-          In order to keep everything in JS, I started developing backend for my
-          apps using NodeJS and GraphQL.
+          Even this website is a little pet project of mine and I designed with
+          Sketch and crafted with JavaScript it from scratch.
         </Paragraph>
         <Paragraph>
-          I play and compose some music in my spare time, but far from
-          publishing it.
+          I play and compose some music in my spare time and I hope to update
+          the website soon to start putting it here as well.
         </Paragraph>
       </ContainerContent>
     </Container>
