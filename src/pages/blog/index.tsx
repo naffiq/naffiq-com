@@ -3,11 +3,28 @@ import { graphql } from "gatsby";
 
 import Container, { ContainerContent } from "../../components/Container";
 import DefaultLayout from "../../layouts";
-import { Paragraph, Heading1, Heading3 } from "../../components/Typography";
-import { Link } from "../../components/Link";
+import { Heading1 } from "../../components/Typography";
 import BlogListItem from "../../components/Blog/BlogListItem";
 
-const BlogPage = ({data}: any) => {
+interface BlogPageProps {
+  data: {
+    allMarkdownRemark: {
+      edges: [{
+        node: {
+          id: string,
+          frontmatter: {
+            path: string,
+            title: string,
+            date: string,
+            excerpt: string
+          }
+        }
+      }]
+    }
+  }
+}
+
+const BlogPage = ({data}: BlogPageProps) => {
   const { edges: posts  } = data.allMarkdownRemark;
   return (
     <DefaultLayout>
@@ -15,15 +32,13 @@ const BlogPage = ({data}: any) => {
         <ContainerContent>
           <Heading1>Latest publishings</Heading1>
 
-          
-          { posts.map(({node}: any) => {
-            return <BlogListItem 
+          { posts.map(({node}) =>  <BlogListItem 
               path={node.frontmatter.path}
               title={node.frontmatter.title}
               date={node.frontmatter.date}
               excerpt={node.frontmatter.excerpt}
             />
-          }) }
+          ) }
         </ContainerContent>
       </Container>
     </DefaultLayout>
