@@ -21,7 +21,7 @@ const BlogPage = ({data}: any) => {
               path={node.frontmatter.path}
               title={node.frontmatter.title}
               date={node.frontmatter.date}
-              excerpt={node.excerpt}
+              excerpt={node.frontmatter.excerpt}
             />
           }) }
         </ContainerContent>
@@ -38,11 +38,11 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          excerpt(pruneLength: 500)
           frontmatter {
             title
             date(formatString: "MMMM DD, YYYY")
             path
+            excerpt
           }
         }
       }

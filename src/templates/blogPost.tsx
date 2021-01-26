@@ -6,11 +6,42 @@ import Container, { ContainerContent } from "../components/Container";
 import DefaultLayout from "../layouts";
 import { Heading1 } from "../components/Typography";
 
-export default function BlogPostTemplate({data}: any) {
+interface BlogPostTemplateProps {
+  data: {
+    markdownRemark: {
+      html: string
+      frontmatter: {
+        path: string,
+        title: string,
+        date: string,
+        excerpt: string,
+        ogImage: string
+      }
+    }
+  }
+}
+
+export default function BlogPostTemplate({data}: BlogPostTemplateProps) {
   const { markdownRemark: post } = data;
   return (
     <DefaultLayout>
-      <Helmet title={`Galymzhan Abdugalimov - ${post.frontmatter.title}`} />
+      <Helmet 
+        title={`${post.frontmatter.title}`} 
+        meta={[
+          {
+            name: "description",
+            content: post.frontmatter.excerpt
+          },
+          {
+            name: "og:description",
+            content: post.frontmatter.excerpt
+          },
+          {
+            name: "og:image",
+            content: post.frontmatter.ogImage
+          }
+        ]}
+      />
       <Container narrow>
         <ContainerContent>
           <Heading1>{ post.frontmatter.title }</Heading1>
@@ -33,6 +64,8 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        excerpt
+        ogImage
       }
     }
   }
