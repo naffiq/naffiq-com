@@ -1,6 +1,7 @@
 'use strict'
 
 const path = require('path')
+const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
@@ -20,6 +21,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       if (!slug) {
         slug = `/${relativePath.replace('.md', '')}/`
       }
+
+      const value = createFilePath({node, getNode})
+      console.log('!!!!!' , value, slug)
 
       // Used to generate URL to view this content.
       createNodeField({

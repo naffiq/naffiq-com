@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Galymzhan Abdugalimov — Personal website`
+    title: `Galymzhan Abdugalimov — Personal website`,
+    siteUrl: 'https://naffiq.com/'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -26,6 +27,7 @@ module.exports = {
         trackingId: "UA-126212802-1"
       }
     },
+    `gatsby-plugin-feed`,
     // Add typescript stack into webpack
     `gatsby-plugin-typescript`,
   ]

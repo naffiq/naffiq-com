@@ -3,8 +3,8 @@ import { graphql } from "gatsby";
 
 import Container, { ContainerContent } from "../../components/Container";
 import DefaultLayout from "../../layouts";
-import { Heading1 } from "../../components/Typography";
 import BlogListItem from "../../components/Blog/BlogListItem";
+import BlogHeader from "../../components/Blog/BlogHeader";
 
 interface BlogPageProps {
   data: {
@@ -30,13 +30,14 @@ const BlogPage = ({data}: BlogPageProps) => {
     <DefaultLayout>
       <Container narrow>
         <ContainerContent>
-          <Heading1>Latest publishings</Heading1>
+          <BlogHeader />
 
           { posts.map(({node}) =>  <BlogListItem 
               path={node.frontmatter.path}
               title={node.frontmatter.title}
               date={node.frontmatter.date}
               excerpt={node.frontmatter.excerpt}
+              key={node.frontmatter.date}
             />
           ) }
         </ContainerContent>
