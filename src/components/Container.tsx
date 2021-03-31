@@ -10,7 +10,7 @@ export const Container = styled.div<{ narrow?: boolean }>`
 `;
 
 export const ContainerContent = styled.div`
-  padding: 0 32px;
+  padding: 32px 32px;
   display: block;
   width: calc(100% - 64px);
 `;

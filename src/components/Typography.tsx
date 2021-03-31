@@ -5,7 +5,9 @@ export const LineThrough = styled.span`
 `;
 
 export const Paragraph = styled.p`
-  line-height: 24px;
+  font-family: 'Lora', serif;
+  line-height: 1.8rem;
+  font-size: 1.1rem;
 `;
 
 export const Heading1 = styled.h1``;
