@@ -11,18 +11,15 @@ const AboutPage = () => (
       <ContainerContent>
         <h1>Hello!</h1>
         <Paragraph>
-          My name is Galymzhan Abdugalimov and I manage IT projects @{" "}
-          <A href="https://petrel.ai" target="_blank">
-            petrel.ai
+          My name is Galymzhan Abdugalimov and I work as a Lead Cloud Engineer @{" "}
+          <A href="https://klika-tech.com" target="_blank">
+            Klika-Tech Inc
           </A>{" "}
-          where we make web services and portals for industrial and financial
-          companies.
+          where we make Internet of Things happen.
         </Paragraph>
         <Paragraph>
-          I used to write code before I realised that I prefer working with
-          people rather than machines. But old habbits never go so I create pet
-          projects from time to time and <Link to="/">put it here</Link>, on my
-          website.
+          I tried myself as a Project Manager, which helped me a lot to grow as a professional, but in the end
+          I still used to code in my spare time because coding is my passion.
         </Paragraph>
         <Paragraph>
           Even this website is a little pet project of mine and I designed with
