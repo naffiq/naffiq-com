@@ -2,8 +2,8 @@ import * as React from "react";
 
 import Container, { ContainerContent } from "../components/Container";
 import DefaultLayout from "../layouts";
-import { LineThrough, Paragraph } from "../components/Typography";
-import Link, { A } from "../components/Link";
+import { Paragraph } from "../components/Typography";
+import { A } from "../components/Link";
 
 const PernePage = () => (
   <DefaultLayout>

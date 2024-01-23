@@ -59,6 +59,17 @@ const MainMenu = () => {
               Blog
             </HeaderMenuLink>
           </HeaderMenuItem>
+          <HeaderMenuItem>
+            <HeaderMenuLink
+              to="/perne"
+              activeStyle={{
+                fontWeight: 700
+              }}
+              partiallyActive
+            >
+              Perne
+            </HeaderMenuLink>
+          </HeaderMenuItem>
         </HeaderMenu>
       </ResponsiveMenu>
     </HeaderMenuContainer>
